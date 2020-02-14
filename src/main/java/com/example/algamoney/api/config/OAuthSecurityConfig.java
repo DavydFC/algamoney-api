@@ -9,9 +9,9 @@ import org.springframework.security.config.annotation.web.configuration.WebSecur
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
 
-@Profile("oauth-security")
 @Configuration
 @EnableWebSecurity
+@Profile("oauth-security")
 public class OAuthSecurityConfig extends WebSecurityConfigurerAdapter{
 
 	@Bean
@@ -24,4 +24,6 @@ public class OAuthSecurityConfig extends WebSecurityConfigurerAdapter{
 	public PasswordEncoder passwordEncoder() {
 		return new BCryptPasswordEncoder();
 	}
+	
+	
 }
